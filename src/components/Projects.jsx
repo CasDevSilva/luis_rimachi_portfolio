@@ -13,10 +13,10 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className='flex flex-col gap-4'
+                className='flex flex-col gap-3 md:gap-4'
             >
-                <h2 className='font-title text-2xl'>Proyectos</h2>
-                <div className='grid grid-cols-4 gap-4 font-content'>
+                <h2 className='font-title text-xl md:text-2xl'>Proyectos</h2>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 font-content'>
                     {projects_data.map(project => (
                         <motion.div
                             key={project.id}

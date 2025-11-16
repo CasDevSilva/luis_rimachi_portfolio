@@ -5,11 +5,10 @@ import { motion } from 'framer-motion'
 const Contact = () => {
     return (
         <div
-            className='flex flex-row gap-6'
+            className='flex flex-row gap-4 md:gap-5 lg:gap-6'
         >
             <Mail
-                size={28}
-                className="hover:text-neutral-400 transition"
+                className="w-6 h-6 md:w-7 md:h-7 hover:text-neutral-400 transition"
             />
             <motion.a
                 whileHover={{ y: -4 }}
@@ -17,8 +16,7 @@ const Contact = () => {
                 href='#'
             >
                 <Linkedin
-                    size={28}
-                    className="hover:text-neutral-400 transition"
+                    className="w-6 h-6 md:w-7 md:h-7 hover:text-neutral-400 transition"
                 />
             </motion.a>
             <motion.a
@@ -27,8 +25,7 @@ const Contact = () => {
                 href='#'
             >
                 <FileUser
-                    size={28}
-                    className="hover:text-neutral-400 transition"
+                    className="w-6 h-6 md:w-7 md:h-7 hover:text-neutral-400 transition"
                 />
             </motion.a>
         </div>

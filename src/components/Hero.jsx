@@ -10,13 +10,13 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='w-1/2 flex flex-col gap-8'
+            className='w-full lg:w-1/2 flex flex-col gap-6 md:gap-7 lg:gap-8'
             // style={{
             //     border: "1px solid red"
             // }}
         >
-            <h1 className='font-title text-3xl'>{name_data}</h1>
-            <p className='font-content text-base text-neutral-400'>{about_data.intro}</p>
+            <h1 className='font-title text-2xl md:text-3xl lg:text-3xl'>{name_data}</h1>
+            <p className='font-content text-sm md:text-base text-neutral-400'>{about_data.intro}</p>
             <Contact/>
         </motion.section>
     )
