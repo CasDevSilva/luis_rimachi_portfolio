@@ -1,16 +1,153 @@
-# React + Vite
+# Portfolio - Diseñador de Interiores
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio minimalista de una sola página para showcasear proyectos de diseño de interiores y modelado 3D.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Diseño minimalista** - Single page scroll
+- **Grid de proyectos** - Inspirado en nick.computer/works
+- **Información objetiva** - Secciones claras y directas
+- **Responsive** - Mobile first
 
-## React Compiler
+## Stack Tecnológico
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- React 18
+- Vite
+- Tailwind CSS
+- Framer Motion (animaciones)
+- Lucide Icons
 
-## Expanding the ESLint configuration
+## Estructura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/
+│   ├── Hero.jsx          # Intro + nombre + título
+│   ├── About.jsx         # Info básica + skills
+│   ├── Projects.jsx      # Grid de trabajos/renders
+│   ├── ProjectView.jsx   # Modal para ver proyecto completo
+│   └── Contact.jsx       # Enlaces de contacto
+├── data/
+│   └── portfolio.js      # Data de proyectos (separada del código)
+└── App.jsx               # Componente principal
+```
+
+## Instalación
+
+```bash
+# Clonar el repositorio
+git clone [url-del-repo]
+
+# Instalar dependencias
+npm install
+
+# Correr en desarrollo
+npm run dev
+
+# Build para producción
+npm run build
+```
+
+## Configuración
+
+### Agregar Proyectos
+
+Edita `src/data/portfolio.js`:
+
+```javascript
+export const projectsData = [
+  {
+    id: 1,
+    title: "Nombre del Proyecto",
+    category: "Residencial / Cocinas / Oficinas",
+    image: "/assets/projects/proyecto1.jpg",
+    color: "bg-amber-50", // Color de fondo del card
+    description: "Descripción breve",
+    renders: [
+      "/assets/renders/render1.jpg",
+      "/assets/renders/render2.jpg"
+    ]
+  }
+]
+```
+
+### Assets
+
+Coloca imágenes en:
+- `/public/assets/projects/` - Thumbnails de proyectos
+- `/public/assets/renders/` - Renders completos
+- `/public/assets/videos/` - Videos de recorridos 3D
+
+## Deployment
+
+### Vercel (Recomendado)
+
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel --prod
+```
+
+### Netlify
+
+```bash
+# Build command
+npm run build
+
+# Publish directory
+dist
+```
+
+## Personalización
+
+### Colores
+
+Los colores principales están en Tailwind config. Para cambiar paleta, edita `tailwind.config.js` o usa clases directamente:
+
+```jsx
+bg-neutral-900  // Fondo oscuro
+bg-neutral-800  // Cards oscuros
+text-neutral-400  // Texto secundario
+```
+
+### Tipografía
+
+Por defecto usa Inter. Para cambiar:
+
+1. Importa fuente en `index.html`
+2. Actualiza `tailwind.config.js` en `fontFamily`
+
+## Contenido a Preparar
+
+- [ ] Bio breve (2-3 líneas)
+- [ ] Lista de habilidades técnicas
+- [ ] Mínimo 6 proyectos con:
+  - Thumbnail principal
+  - 3-5 renders adicionales
+  - Categoría
+  - Descripción corta
+- [ ] Links de contacto (email, LinkedIn, Behance, etc.)
+
+## Scripts
+
+```bash
+npm run dev      # Servidor desarrollo
+npm run build    # Build producción
+npm run preview  # Preview del build
+```
+
+## Performance
+
+- Lazy loading de imágenes
+- Optimización con Vite
+- Código minificado en producción
+
+## Licencia
+
+MIT
+
+---
+
+**Desarrollado para showcasear trabajo de diseño de interiores y modelado 3D**
