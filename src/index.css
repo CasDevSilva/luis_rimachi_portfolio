@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #248232;
+    --secondary-color: #2D3A3A;
+    --success-color: #2BA84A;
+    --dark-color: #040F0F;
+    --light-color: #FCFFFC;
+}
+
+.bg_primary {
+    background: var(--dark-color);
+}
+
+.text_light {
+    color: var(--light-color);
+}
+
+.text-primary{
+    color: var(--primary-color);
+}
+
+.text-secondary{
+    color: var(--secondary-color);
+}
+
+.font-title {
+    font-family: "Rammetto One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-content {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
